@@ -1,0 +1,17 @@
+{
+    "name": "brc/sanitizer",
+    "description": "A php input sanitizer",
+    "type": "library",
+    "license": "GNU",
+    "autoload": {
+        "psr-4": {
+            "Brc\\Sanitizer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Arthur Brenno"
+        }
+    ],
+    "require": {}
+}
