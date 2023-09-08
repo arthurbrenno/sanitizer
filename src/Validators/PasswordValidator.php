@@ -3,9 +3,20 @@
 namespace Brc\Inspector\Validators;
 
 use Brc\Inspector\Constants\RuleSet;
-use Brc\Inspector\Sanitizers\StringSanitizer;
 
+/**
+ * Represents a password validator.
+ * @package Brc\Inspector\Validators
+ * @see \Brc\Inspector\Constants\RuleSet
+ * @see \Brc\Inspector\Contracts\Validatable
+ */
 class PasswordValidator implements \Brc\Inspector\Contracts\Validatable {
+
+    /**
+     * Validates a password.
+     * @param $input The input to be validated.
+     * @return bool checks if a password is valid.
+     */
     public static function validate($input) {
         if (!is_string($input)) {
             return false;
@@ -17,7 +28,7 @@ class PasswordValidator implements \Brc\Inspector\Contracts\Validatable {
         $upperCase = 0;
         $length = strlen($input);
 
-        for ($i = 0; i < $length; ++$i) {
+        for ($i = 0; $i < $length; ++$i) {
             $character = $input[$i];
 
             if (preg_match('/[\'^£$%&*()}{@#~?><>,|=_+¬-]/', $character) && $specialCharacters < 1) {

@@ -4,6 +4,10 @@ namespace Brc\Inspector\Sanitizers;
 
 use Brc\Inspector\Constants\RuleSet;
 
+/**
+ * Represents a string sanitizer.
+ * @package Brc\Inspector\Sanitizers
+ */
 class StringSanitizer implements \Brc\Inspector\Contracts\Sanitizeable {
 
     /**
@@ -28,6 +32,14 @@ class StringSanitizer implements \Brc\Inspector\Contracts\Sanitizeable {
 
 
         return filter_var($input, FILTER_SANITIZE_STRING);
+    }
 
+    /**
+     * Converts a string to HTML entities.
+     * @param $string The string to be converted.
+     * @return string The string with HTML entities.
+     */
+    public static function convertCharsToHTMLEntities($string) {
+        return htmlspecialchars($string);
     }
 }
