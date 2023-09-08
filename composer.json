@@ -2,7 +2,6 @@
     "name": "brc/inspector",
     "description": "A php input inspector/sanitizer",
     "type": "library",
-    "license": "GNU",
     "autoload": {
         "psr-4": {
             "Brc\\Inspector\\": "src/"
