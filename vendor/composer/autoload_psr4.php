@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Brc\\Sanitizer\\' => array($baseDir . '/src'),
+    'Brc\\Inspector\\' => array($baseDir . '/src'),
 );
